@@ -97,7 +97,7 @@ export default async function Home () {
           <ThemeSwitcher />
         </div>
       </div>
-      <div className="div5 flex flex-col w-full max-w-5xl items-center justify-between container mx-auto p-5">
+      <div className="div5 flex flex-col w-full max-w-5xl items-center justify-center container mx-auto p-5">
         <div className="flex flex-row w-full max-sm:flex-col max-sm:items-center">
           <h1 className="flex-1 m-auto">Contacts</h1>
           <nav className="flex flex-row gap-2 items-center">
@@ -111,7 +111,7 @@ export default async function Home () {
         <ThemeSwitcher />
       </div>
       <div className="div7" />
-      <div className="div8">
+      <div className="div8 p-2">
         <ContactList
           getContacts={getContacts}
           deleteContact={deleteContact}

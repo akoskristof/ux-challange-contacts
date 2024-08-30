@@ -40,7 +40,7 @@ const Modal = ({ createContact, editContact }: {
 
   console.log(data)
 
-  const close = (e: MouseEvent<any>) => {
+  const close = () => {
     dispatch(setModalOptions({ edit: false, editId: null, visible: false }))
   }
   const backendCall = (e: MouseEvent<any>) => {
@@ -49,7 +49,7 @@ const Modal = ({ createContact, editContact }: {
       editContact(data).then((res) => {
         if (res) {
           dispatch(storeUpdatedContact(res))
-          dispatch(setModalOptions({ ...modalOptions, visible: false }))
+          close()
         }
       }).catch(err => {
         console.log(err)
@@ -58,7 +58,7 @@ const Modal = ({ createContact, editContact }: {
       createContact(data).then((res) => {
         if (res) {
           dispatch(addContact(res))
-          dispatch(setModalOptions({ ...modalOptions, visible: false }))
+          close()
         }
       }).catch(err => {
         console.log(err)

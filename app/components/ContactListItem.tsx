@@ -29,11 +29,11 @@ const ContactListItem = ({
   return (
     <div
       className={
-        'flex flex-row items-center w-full gap-4 p-3 max-sm:flex-col ' +
+        'flex flex-row items-center w-full gap-4 p-3' +
         (myMenuOpened() ? 'hovered' : '')
       }
     >
-      <div className=" flex flex-row gap-2 sm:flex-1 max-sm:self-start">
+      <div className=" flex flex-row gap-2 flex-1 max-sm:self-start">
         <Image
           src={contact?.image || '/profiles/Default.png'}
           alt=""
@@ -47,10 +47,10 @@ const ContactListItem = ({
         </div>
       </div>
       <div className={'display-on-hover flex flex-row gap-2 self-end'}>
-        <Button mode="secondary" className="p-2">
+        <Button mode="secondary" className="p-2 max-sm:hidden">
           <Mute />
         </Button>
-        <Button mode="secondary" className="p-2">
+        <Button mode="secondary" className="p-2 max-sm:hidden">
           <Call />
         </Button>
         <Button mode="secondary" className={'p-2 ' + (myMenuOpened() ? 'active' : '')} onClick={openMenu} ref={ref}>

@@ -56,7 +56,10 @@ const Menu = ({ id, anchor, setAnchor, deleteContact }: ModalProps) => {
         <div
           className="menu absolute"
           onClick={(e) => { e.stopPropagation() }}
-          style={{ left: anchor.left + 0, top: anchor.top + 45 }}
+          style={{
+            left: Math.min(window.innerWidth - 210, anchor.left),
+            top: anchor.top + 45
+          }}
         >
           <Button
             mode="primary"
