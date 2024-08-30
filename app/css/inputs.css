@@ -1,0 +1,84 @@
+input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 12px 8px 12px !important;
+  gap: 8px;
+  border-radius: 8px;
+
+  border: 1px solid var(--g-60);
+  background-color: var(--g-80);
+  outline: none;
+  font-family: var(--font-lexend) !important;
+}
+input:hover {
+  border-color: var(--g-30);
+}
+input:focus {
+  border-color: var(--g-10);
+  background-color: var(--g-60);
+}
+
+button.primary {
+  background-color: var(--g-60);
+}
+button.primary:hover {
+  background-color: var(--g-50);
+}
+button.primary:active {
+  background-color: var(--g-40);
+}
+button.secondary {
+  background-color: none;
+}
+button.secondary:hover {
+  background-color: var(--g-80);
+}
+button.secondary:active,
+button.active {
+  background-color: var(--g-80);
+}
+button {
+  height: 40px;
+  gap: 8px;
+  border-radius: 8px;
+  opacity: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.secondary {
+  border-radius: 8px;
+}
+button.special {
+  border-radius: 1000px;
+  padding: 8px 16px 8px 12px !important;
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.7) 0%, #282828 100%);
+  border: 1px solid;
+
+  border-image-source: linear-gradient(
+    180deg,
+    #3c3c3c 0%,
+    rgba(60, 60, 60, 0) 100%
+  );
+}
+button.special:hover {
+  background: linear-gradient(180deg, rgba(40, 40, 40, 0.7) 0%, #282828 100%),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.04));
+}
+
+.menu button:has(+ button) {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.menu button + button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.display-on-hover {
+  opacity: 0;
+}
+div:hover > .display-on-hover,
+div.hovered > .display-on-hover {
+  opacity: 1;
+}
