@@ -29,7 +29,7 @@ const ContactListItem = ({
   return (
     <div
       className={
-        'flex flex-row items-center w-full gap-4 p-3' +
+        'flex flex-row items-center w-full gap-4 p-3 ' +
         (myMenuOpened() ? 'hovered' : '')
       }
     >

@@ -126,11 +126,6 @@ label {
   border-right-width: 1px;
   border-bottom-width: 1px;
 }
-.div4,
-.div5,
-.div6 {
-  height: 96px;
-}
 .div6 {
   grid-area: 2 / 3 / 3 / 4;
   border-bottom-width: 1px;

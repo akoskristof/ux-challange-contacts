@@ -38,8 +38,6 @@ const Modal = ({ createContact, editContact }: {
     console.log(modalOptions?.edit)
   }, [editedContact, modalOptions, setData])
 
-  console.log(data)
-
   const close = () => {
     dispatch(setModalOptions({ edit: false, editId: null, visible: false }))
   }

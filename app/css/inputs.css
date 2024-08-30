@@ -78,7 +78,14 @@ button.special:hover {
 .display-on-hover {
   opacity: 0;
 }
+
 div:hover > .display-on-hover,
 div.hovered > .display-on-hover {
   opacity: 1;
+}
+
+@media (max-width: 640px) {
+  .display-on-hover {
+    opacity: 1;
+  }
 }
